@@ -54,7 +54,7 @@ if make_dosplot:
     
     # make and save a plot of the band structure and DOS
     dos = vsp.complete_dos
-    energy_range = (-10, 5) # eV, change if desired to change plotting range
+    energy_range = (-10, 7) # eV, change if desired to change plotting range
 
     # create DosPlotter object with smearing  
     edosplot = DosPlotter(sigma=dos_smearing)
