@@ -11,7 +11,7 @@ from pymatgen.core.surface import SlabGenerator, Structure
 
 def make_surface(file, facet = (1,1,1), verbose = True):
     # read in structure
-    st = Structure.from_file(bulk_file)
+    st = Structure.from_file(file)
     # generate slabs with the given facet
     slabgen = SlabGenerator(st, facet, 6, 16, center_slab=True)
     all_slabs = slabgen.get_slabs(symmetrize = True) 

@@ -23,6 +23,6 @@ def make_supercell(file, expansion = [2,2,2]):
     
 if __name__ == '__main__':
     file = 'POSCAR_SURF_00' 
-	expansion = [2,2,1]
+    expansion = [2,2,1]
     make_supercell(file, expansion)
     
