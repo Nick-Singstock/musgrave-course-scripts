@@ -15,13 +15,14 @@ def make_supercell(file, expansion = [2,2,2]):
     # create supercell
     st.make_supercell(expansion)
     # make a supercell folder in the directory if it doesn't exist
-    new_loc = '/'.join(file.split('/')[:-1])+'/supercell/'
+    new_loc = 'supercell/'
     if not os.path.exists(new_loc):
-        os.makedirs(new_loc)
+        os.mkdir(new_loc)
     # save supercell
     st.to('POSCAR', new_loc+'POSCAR')
     
 if __name__ == '__main__':
-    file = 'POSCAR' 
-    make_supercell(file)
+    file = 'POSCAR_SURF_00' 
+	expansion = [2,2,1]
+    make_supercell(file, expansion)
     
